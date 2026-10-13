@@ -1,4 +1,4 @@
-from machine import Pin
+from machine import Pin, PWM
 import time
 import random
 
@@ -14,10 +14,34 @@ colors = [red, yellow, green]
 sequence = []
 game = True
 
+buzzer = PWM(Pin(18))
 start_button = Pin(xx, Pin.IN, Pin.PULL_DOWN)
 
 countdown = [3, 2, 1]
 
+# Buzzer function
+def beep(color, duration):   
+    if color == red:
+        frequency = 300
+
+    elif color == yellow:
+        frequency = 500
+
+    elif color == green:
+        frequency = 700
+        
+    buzzer.freq(frequency)
+    buzzer.duty_u16(32768)
+    time.sleep(duration)
+    buzzer.duty_u16(0)
+
+# Game over sound
+def game_over_sound():
+    buzzer.freq(1000)
+    buzzer.duty_u16(32768)
+    time.sleep(2)
+    buzzer.duty_u16(0)
+    
 # Wait for Start button
 # 'while' runs a continuous loop of 0.01sec waiting for button value to become 1
 while start_button.value() == 0:
@@ -25,6 +49,10 @@ while start_button.value() == 0:
 
 for i in countdown:
     print(i)
+    buzzer.freq(100)
+    buzzer.duty_u16(32768)
+    time.sleep(0.5)
+    buzzer.duty_u16(0)
     time.sleep(1)
 
 print("GO!")
@@ -37,6 +65,7 @@ while game:
     
     for color in sequence:
         color.value(1)
+        beep(color, 0.5)
         time.sleep(1)
         color.value(0)
         time.sleep(0.5)
@@ -61,6 +90,7 @@ while game:
     
         if player_color != color:
             print("GAME OVER")
+            game_over_sound()
             game = False
             break
         
