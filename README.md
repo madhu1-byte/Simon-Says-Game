@@ -1,4 +1,4 @@
-# 🎮 Pico Simon Says — Interactive Memory Game
+# Pico Simon Says Interactive Game
 
 An interactive, hardware-based **Simon Says memory game** developed using the **Raspberry Pi Pico and MicroPython**.
 
@@ -15,7 +15,7 @@ This project explores embedded systems programming, GPIO communication, hardware
 - Display real-time game information through an I2C LCD.
 - Explore modular programming and embedded software development.
 
-## 🛠️ Hardware Components
+## Hardware Components
 
 | Component | Purpose |
 |---|---|
@@ -28,7 +28,7 @@ This project explores embedded systems programming, GPIO communication, hardware
 | Jumper Wires | Hardware connections |
 | Potentiometer (Optional) | Adjustable difficulty settings |
 
-## 🧠 How It Works
+## How It Works
 
 **1. Game Initialization**
 
