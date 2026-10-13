@@ -6,7 +6,7 @@ The game challenges players to memorize and repeat increasingly complex LED sequ
 
 This project explores embedded systems programming, GPIO communication, hardware integration, and interactive game development.
 
-## 🎯 Project Objectives
+## Project Objectives
 
 - Develop an interactive memory game using the Raspberry Pi Pico.
 - Interface physical input and output components using MicroPython.
