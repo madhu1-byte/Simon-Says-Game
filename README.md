@@ -1,4 +1,4 @@
-# 🎮 Pico Simon Says Interactive Game
+# Pico Simon Says Interactive Game
 
 An interactive, hardware-based **Simon Says memory game** developed using the **Raspberry Pi Pico and MicroPython**.
 
@@ -6,7 +6,7 @@ The game challenges players to memorize and repeat increasingly complex LED sequ
 
 This project explores embedded systems programming, GPIO communication, PWM-based sound generation, hardware integration, and interactive game development.
 
-## 🎯 Project Objectives
+## Project Objectives
 
 - Develop an interactive memory game using the Raspberry Pi Pico.
 - Interface physical input and output components using MicroPython.
@@ -16,7 +16,7 @@ This project explores embedded systems programming, GPIO communication, PWM-base
 - Integrate LEDs, push buttons, and a buzzer into an interactive circuit.
 - Practice embedded programming and hardware troubleshooting.
 
-## 🛠️ Hardware Components
+## Hardware Components
 
 | Component | Purpose |
 |---|---|
@@ -28,7 +28,7 @@ This project explores embedded systems programming, GPIO communication, PWM-base
 | Breadboard | Circuit assembly |
 | Jumper Wires | Hardware connections |
 
-## ⚙️ How It Works
+## How It Works
 
 **1. Game Initialization**
 
@@ -65,7 +65,7 @@ Each successful round adds another randomly selected LED to the sequence, increa
 
 If the player presses an incorrect button, the program displays `GAME OVER` in the console and activates a continuous two-second buzzer tone at 1000 Hz.
 
-## 🧠 Example Gameplay
+## Example Gameplay
 
 | Round | LED Sequence |
 |---|---|
@@ -76,7 +76,7 @@ If the player presses an incorrect button, the program displays `GAME OVER` in t
 
 The sequence continues growing until the player makes a mistake.
 
-## 🔌 GPIO Pin Configuration
+## GPIO Pin Configuration
 
 | Component | GPIO Pin | Mode |
 |---|---|---|
@@ -89,7 +89,7 @@ The sequence continues growing until the player makes a mistake.
 | Start Button | GP0 | Input (Pull-down) |
 | Buzzer | GP6 | PWM Output |
 
-## 📸 Circuit Setup
+## Circuit Setup
 
 The completed prototype integrates three colored push buttons, a dedicated start button, three LEDs, and a buzzer with the Raspberry Pi Pico.
 
@@ -108,13 +108,13 @@ The completed prototype integrates three colored push buttons, a dedicated start
   </tr>
 </table>
 
-## 🎥 Gameplay Demonstration
+## Gameplay Demonstration
 
 The following demonstration showcases the start-button countdown, randomized LED sequences, corresponding buzzer tones, player input, and game-over detection.
 
 [▶️ Watch Simon Says Gameplay Demonstration](https://github.com/madhu1-byte/Simon-Says-Game/releases/download/v1.0.0/simon_says_game.mov)
 
-## 💻 Technologies Used
+## Technologies Used
 
 - **MicroPython** — Embedded software development
 - **Raspberry Pi Pico** — Microcontroller platform
@@ -123,7 +123,7 @@ The following demonstration showcases the start-button countdown, randomized LED
 - **PWM** — Buzzer frequency and sound generation
 - **Python Random Module** — Randomized sequence generation
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - Add an LCD display for real-time game status and scoring.
 - Implement adjustable difficulty levels and sequence playback speeds.
