@@ -2,20 +2,21 @@ from machine import Pin, PWM
 import time
 import random
 
-red = Pin(xx, Pin.OUT)
-yellow = Pin(xx, Pin.OUT)
-green = Pin(xx, Pin.OUT)
+red = Pin(16, Pin.OUT)
+yellow = Pin(17, Pin.OUT)
+green = Pin(18, Pin.OUT)
 
-red_button = Pin(xx, Pin.IN, Pin.PULL_DOWN)
-yellow_button = Pin(xx, Pin.IN, Pin.PULL_DOWN)
-green_button = Pin(xx, Pin.IN, Pin.PULL_DOWN) 
+red_button = Pin(13, Pin.IN, Pin.PULL_DOWN)
+yellow_button = Pin(14, Pin.IN, Pin.PULL_DOWN)
+green_button = Pin(15, Pin.IN, Pin.PULL_DOWN)
+
+start_button = Pin(0, Pin.IN, Pin.PULL_DOWN)
+
+buzzer = PWM(Pin(1 ))
 
 colors = [red, yellow, green]
 sequence = []
 game = True
-
-buzzer = PWM(Pin(18))
-start_button = Pin(xx, Pin.IN, Pin.PULL_DOWN)
 
 countdown = [3, 2, 1]
 
@@ -73,6 +74,7 @@ while game:
 
     for color in sequence:    
     # Wait for user clicks buttons
+        print("Waiting for player input...")
         while (red_button.value() == 0 and
                yellow_button.value() == 0 and
                green_button.value() == 0):
